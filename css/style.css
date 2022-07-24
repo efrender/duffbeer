@@ -33,7 +33,7 @@ main{
     height: 100vh;
 }
 .container{
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 /*HEADER*/
@@ -51,16 +51,16 @@ header{
 .nav-menu{
     --open: scale(1);
     --close: scale(0);
-    --width-menu: translateX(12%);
+    --width-menu: translateX(17%);
 }
 .nav-menu:target{
     --open: scale(0);
     --close: scale(1);
-    --width-menu: translateX(-90%);
+    --width-menu: translateX(-85%);
 }
 .menu{
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     transform: var(--width-menu);
     transition: 2s ease-in-out;
@@ -91,8 +91,8 @@ header{
 }
 .ul-menu li{
     margin: 2% 0;
-    font-size: 1.5rem;
-    line-height: 1.2rem;
+    font-size: clamp(1.2rem, 2rem, 3rem);
+    line-height: 100%;
 }
 .ul-menu li:hover{
     color:var(--red);
